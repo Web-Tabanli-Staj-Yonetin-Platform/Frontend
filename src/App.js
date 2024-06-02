@@ -6,8 +6,12 @@ import Register from './components/Register.js';
 import HomePage from "./components/HomePage.js";
 import Search from "./components/SearchPage.js";
 import Profile from "./components/profilePage.js"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return(
+    <div>    
+      <ToastContainer />
   <Router>
   <Routes>
         <Route path="/" element={<LoginPage />} />
@@ -18,6 +22,7 @@ function App() {
 
   </Routes>
 </Router>
+</div>
   );
 }
 

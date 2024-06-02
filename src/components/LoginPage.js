@@ -6,34 +6,53 @@ import Circle from './circles.js';
 import './HomePage';
 import Button from './Button';
 import axios from 'axios';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
-  const [username, setUsername] = useState('');
+  const [_id, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const nav= useNavigate();
+  const [error, setError] = useState(''); // Hata mesajı için state
+  const nav = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-        
-    try {
-        // Kullanıcı bilgilerini sunucuya POST isteği ile gönder
-        const response = await axios.post('/api/login', {
-            username,
-            password
-        });
+    console.log('Form submitted'); // Konsola mesaj yaz
 
-        console.log(response.data); // Sunucudan gelen cevabı konsola yazdır
+    try {
+      // Kullanıcı bilgilerini sunucuya POST isteği ile gönder
+      const response = await axios.post('http://localhost:5010/api/login', {
+        _id,
+        password
+      });
+
+      console.log('Response received:', response); // Yanıtı konsola yaz
+
+      if (response.status === 200) { // Başarılı yanıt kontrolü
+        toast.success('Başarıyla giriş yapıldı');
+        console.log('Login successful');
         nav('/HomePage');
+      } 
+      if (response.status === 404) {
+        toast.error('Hatalı kullanıcı adı veya şifre');
+        
+      } else {
+        toast.error('Sunucu hatası oluştu. Lütfen daha sonra tekrar deneyin');
+        
+      } {
+        console.log('Login failed:', response.data.message);
+        setError('Giriş başarısız: ' + response.data.message); // Başarısız mesaj
+      }
     } catch (error) {
-        console.error('Giriş hatası:', error);
+      console.error('Giriş hatası:', error);
+      setError('Sunucu hatası. Lütfen daha sonra tekrar deneyiniz.');
     }
-  };
-  const handleLoginClick = () => {
-    nav('/HomePage'); // '/HomaPage' rotasına yönlendirme yapılır
   };
 
   return (
     <div className="login-container">
+       <ToastContainer />
       <div className="login-form">
+        
         <h2>Hoş Geldin!</h2>
         <h3>Inanılmaz bir deneyim yaşamak için lütfen giriş yap.</h3>
         <form onSubmit={handleSubmit}>
@@ -41,7 +60,7 @@ const Login = () => {
             <input
               type="text"
               id="username"
-              value={username}
+              value={_id}
               onChange={(e) => setUsername(e.target.value)}
               placeholder="Kullanıcı Adı"
             />
@@ -55,7 +74,7 @@ const Login = () => {
               placeholder="Şifre"
             />
           </div>
-          <Button text="Giriş Yap" action={   handleLoginClick}/>
+          <Button type="submit" text="Giriş Yap" />
           <h3> Hala aramıza katılmadın mı?</h3> 
           <h3>
           <Link to="/Register">Hemen Üye Ol!</Link>
