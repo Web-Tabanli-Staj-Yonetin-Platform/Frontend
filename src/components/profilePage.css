@@ -1,0 +1,80 @@
+/* profilePage.css */
+
+.anasayfa-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3f2ef; /* LinkedIn'in arka plan rengine benzeyen bir renk */
+    padding: 20px;
+    min-height: 100vh; /* Sayfanın tamamını kaplamak için minimum yükseklik */
+  }
+  
+  .content-container {
+    width: 100%;
+    max-width: 800px; /* İçeriğin genişliğini sınırla */
+    background-color: #fff; /* Beyaz arka plan */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölgelendirme efekti */
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .profile-container {
+    background-color: #f3f2ef; /* Arkaplan rengini değiştir */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-info {
+    width: 100%; /* Profil bilgilerini tam genişlikte yay */
+    max-width: 600px; /* Maksimum genişlik belirle */
+  }
+  
+  .profile-info h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Başlık metnini ortala */
+  }
+  
+  .info-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f3f2ef; /* Arkaplan rengini değiştir */
+  }
+  
+  .info-container label {
+    width: 120px;
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  .info-container span {
+    flex: 1;
+    color: #555;
+  }
+  
+  .bottom-button {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .bottom-button button {
+    padding: 10px 20px;
+    background-color: #0077b5; /* LinkedIn'in mavi rengi */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bottom-button button:hover {
+    background-color: #005f8e; /* Hover durumunda daha koyu bir mavi tonu */
+  }
+  
