@@ -1,6 +1,8 @@
+//Kullanıcı Girişinin Yapıldığı Login Bölümü
+
 import React, { useState} from 'react';
 import { Link ,useNavigate} from 'react-router-dom';
-import './Login.css'; // CSS dosyasını import et
+import './LoginPage.css'; // CSS dosyasını import et
 import './Register.js';
 import Circle from './circles.js';
 import './HomePage';
@@ -8,6 +10,7 @@ import Button from './Button';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
   const [_id, setUsername] = useState('');
   const [password, setPassword] = useState('');

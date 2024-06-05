@@ -1,7 +1,7 @@
-// AnaSayfa.js
-
+//Stajyer Kullanıcısı Anasayfa
 import React from 'react';
 import TopMenu from './TopMenu';
+import Circle from './circles';
 import ContentBox from './ContentBox';
 import './homePage.css'
 
@@ -9,6 +9,7 @@ function AnaSayfa() {
   return (
     <div className="anasayfa-container">
       <TopMenu />
+      <Circle />
       <div className="content-container">
         <ContentBox title="SOFTWARE DESIGN ENGINEER INTERNSHIP" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                    Phasellus sollicitudin, libero sit amet tincidunt placerat, purus nulla tincidunt lorem, sit amet mollis sem nibh in urna. 
@@ -23,7 +24,7 @@ function AnaSayfa() {
                    Pellentesque sed nunc risus. Sed placerat nunc non augue vulputate, non facilisis ante mollis. Suspendisse sollicitudin scelerisque tortor, a efficitur neque aliquam vel. 
                    Vivamus nec justo eget ipsum porttitor scelerisque quis vitae diam. Vestibulum ut nunc dolor. Vestibulum semper vel lorem ut facilisis. Suspendisse iaculis elit quis arcu dapibus elementum." />
         <ContentBox title="Başlık 3" content="Kısa bir dummy yazı" />
-        <ContentBox title="Başlık 4" content="Kısa bir dummy yazı" />
+        <ContentBox />
       </div>
       
     </div>

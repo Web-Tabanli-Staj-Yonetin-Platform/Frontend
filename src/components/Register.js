@@ -1,4 +1,4 @@
-// Register.js
+//Kullanıcı Kaydının Oluşturulduğu Register Bölümü
 
 import React, { useState } from 'react';
 import './Register.css';
@@ -7,12 +7,10 @@ import { Link } from 'react-router-dom';
 
 function Register() {
   const [formData, setFormData] = useState({
-    fullName: '',
-    school: '',
-    grade: '',
-    averageGrade: '',
-    tcIdentity: '',
-    city: ''
+    username: '',
+    email: '',
+    password: '',
+    role:''
   });
 
   const handleChange = (e) => {
@@ -33,74 +31,59 @@ function Register() {
       <form className="register-form" onSubmit={handleSubmit}>
         <h2>Register</h2>
         <div className="form-group">
-          {/* <label htmlFor="fullName">Full Name</label> */}
+          {/* <label htmlFor="username">username</label> */}
           <input
             type="text"
-            id="fullName"
-            name="fullName"
-            value={formData.fullName}
+            id="username"
+            name="username"
+            value={formData.username}
             onChange={handleChange}
             required
-            placeholder='İsim Soyisim*'
+            placeholder='Kullanıcı Adınız*'
           />
         </div>
         <div className="form-group">
-          {/* <label htmlFor="school">School</label> */}
+          {/* <label htmlFor="email">email</label> */}
           <input
             type="text"
-            id="school"
-            name="school"
-            value={formData.school}
+            id="email"
+            name="email"
+            value={formData.email}
             onChange={handleChange}
             required
-            placeholder='Okul*'
+            placeholder='E-posta Adresiniz*'
           />
         </div>
         <div className="form-group">
-          {/* <label htmlFor="grade">Grade</label> */}
+          {/* <label htmlFor="role">role</label> */}
           <select
-            id="grade"
-            name="grade"
-            value={formData.grade}
+            id="role"
+            name="role"
+            value={formData.role}
             onChange={handleChange}
             
           >
-            <option value="">Select Grade</option>
-            <option value="Prep">Hazırlık</option>
-            <option value="1st">1. Sınıf</option>
-            <option value="2nd">2. Sınıf</option>
-            <option value="3rd">3. Sınıf</option>
-            <option value="4th">4. Sınıf</option>
+            <option value="">Kullanıcı Türü Seçiniz *</option>
+            <option value="1st">Şirket</option>
+            <option value="2nd">Stajyer</option>
           </select>
         </div>
         <div className="form-group">
-          {/* <label htmlFor="averageGrade">Average Grade</label> */}
+          {/* <label htmlFor="password">password</label> */}
           <input
-            type="text"
-            id="averageGrade"
-            name="averageGrade"
-            value={formData.averageGrade}
+            type="password"
+            id="password"
+            name="password"
+            value={formData.password}
             onChange={handleChange}
             required
-            placeholder='Güncel Not Ortalaması'
-          />
-        </div>
-        <div className="form-group">
-          {/* <label htmlFor="tcIdentity">TC Identity</label> */}
-          <input
-            type="text"
-            id="tcIdentity"
-            name="tcIdentity"
-            value={formData.tcIdentity}
-            onChange={handleChange}
-            required
-            placeholder='TC Kimlık No*'
+            placeholder='Şifrenizi Giriniz*'
           />
         </div>
         <h3>* Zorunlu alanları lütfen eksiksiz doldurunuz.</h3>
         <button type="submit" className="submit-button">Register</button>
         <h3>
-          <Link to = "/">Giriş Yap</Link>
+          <Link to = "/LoginPage">Giriş Yap</Link>
         </h3>
       </form>
       <Circle />

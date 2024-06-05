@@ -1,6 +1,4 @@
-/* Register.css */
-
-.register-container {
+.login-container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -10,7 +8,7 @@
     background-color: #2148C0;
   }
   
-  .register-form {
+  .login-form {
     position: relative;
     z-index: 1;
     width: 300px;
@@ -25,24 +23,16 @@
     margin-bottom: 20px;
     color: #2148C0;
   }
-  
-  h3 {
+  h3{
     text-align: center;
     color: #30333d;
     font-size: xx-small;
   }
   
-  .form-group input,
-  .form-group select {
+  .form-group {
     margin-bottom: 15px;
   }
-  select {
-    width: 96%;
-    padding: 9px;
-    border: 1px solid #2148C0;
-    border-radius: 5px;
-  }
-
+  
   label {
     display: block;
     margin-bottom: 5px;
@@ -56,17 +46,19 @@
     border: 1px solid #2148C0;
     border-radius: 5px;
   }
-  
-  .submit-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #6F8CE9;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  .circles-container {
+    position: absolute;
+    bottom: 0px; /* Dairelerin login konteynerına olan mesafesi */
+    left: 0px; /* Dairelerin login konteynerına olan mesafesi */
+    width: 400px; /* Dairelerin genişliği */
+    height: 400px; /* Dairelerin yüksekliği */
+    overflow: hidden;
+    z-index: 0;
   }
   
-  .submit-button:hover {
-    background-color: #2148C0;
+  .quarter-circle {
+    width: 400px; /* Çeyrek dairenin genişliği */
+    height: 400px; /* Çeyrek dairenin yüksekliği */
+    background-color: #6F8CE9; /* Daire rengi */
+    clip-path: circle(50% at 7% 96%) /* Clip-path ile çeyrek daireyi oluştur */
   }

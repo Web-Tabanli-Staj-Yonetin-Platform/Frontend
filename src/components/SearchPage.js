@@ -1,4 +1,4 @@
-// AramaSayfasi.js
+//Arama Sayfasi Hiç Kullanılmayabilir
 
 import React, { useState } from 'react';
 import Button from './Button';

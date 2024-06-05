@@ -1,0 +1,59 @@
+.login-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2148C0;
+  }
+  
+  .login-form {
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #c4deee;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  h1{
+    text-align: center;
+    color: #30333d;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .circles-container {
+    position: absolute;
+    bottom: 0px; /* Dairelerin login konteynerına olan mesafesi */
+    left: 0px; /* Dairelerin login konteynerına olan mesafesi */
+    width: 400px; /* Dairelerin genişliği */
+    height: 400px; /* Dairelerin yüksekliği */
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .quarter-circle {
+    width: 400px; /* Çeyrek dairenin genişliği */
+    height: 400px; /* Çeyrek dairenin yüksekliği */
+    background-color: #6F8CE9; /* Daire rengi */
+    clip-path: circle(50% at 7% 96%) /* Clip-path ile çeyrek daireyi oluştur */
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #6F8CE9;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }  
+  
+  .btn:hover {
+    background-color: #e3e7f1;
+  }
