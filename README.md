@@ -1,4 +1,4 @@
-# Frontend Kodlarında Güncel Olarak Yapılanlar:
+# Bu Frontend Kodlarının Güncel Durumu:
 
 - "Web Tabanlı Staj Yönetim Uygulaması" frontend kodları güncellendi. 
 - Backend için endpointlerin tekrardan gözden geçirilip düzenlenmesi lazım.
