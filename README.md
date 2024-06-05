@@ -1,2 +1,2 @@
 # frontend
-Web Tabanlı Staj Yönetim Uygulaması Frontend Kaynak Kodları(güncel)
+Web Tabanlı Staj Yönetim Uygulaması Frontend Kaynak Kodları(güncel
